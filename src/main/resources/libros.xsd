@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://idat.edu.pe/ws"
+        xmlns:tns="http://idat.edu.pe/ws"
+        elementFormDefault="qualified">
+
+    <element name="getLibroRequest">
+        <complexType>
+            <sequence>
+                <element name="titulo" type="string"></element>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="getLibroResponse">
+        <complexType>
+            <sequence>
+                <element name="Libro" type="tns:Libro"></element>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Libro">
+        <sequence>
+            <element name="titulo" type="string"></element>
+            <element name="autor" type="string"></element>
+            <element name="anioPublicacion" type="int"></element>
+            <element name="genero" type="string"></element>
+        </sequence>
+    </complexType>
+</schema>
